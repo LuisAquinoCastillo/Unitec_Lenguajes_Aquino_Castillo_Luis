@@ -10,6 +10,13 @@ package abstraccion;
  * @author luis
  */
 public class Imc {
-    Usuario u;
+    Usuario u; //Usuario es un atributo
     String resultado;
+    
+    public String calcular()
+    {
+        float mivalor=u.peso/(u.altura*u.altura);
+        resultado="Tu imc es "+mivalor;
+        return resultado;
+    }
 }
