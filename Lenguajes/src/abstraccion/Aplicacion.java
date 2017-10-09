@@ -5,6 +5,8 @@
  */
 package abstraccion;
 
+import java.awt.Color;
+
 /**
  *
  * @author luis
@@ -101,13 +103,17 @@ public class Aplicacion extends javax.swing.JFrame {
         Usuario luis=new Usuario(); //Declaracion de un objeto. [referencia] val = new [Constructor]
         //luis.peso = 90;
         //luis.altura =1.80f;
-        luis.setPeso(70);
-        luis.setAltura(1.80f);
+        float alturita=Float.parseFloat(textoAltura.getText());
+        float pesito=Float.parseFloat(textoPeso.getText());
+        
+        luis.setAltura(alturita);
+        luis.setPeso(pesito);
         
         Imc modelo=new Imc();//Creacion de un modelo
         modelo.u=luis;
         modelo.calcular();
         etiqueta.setText(modelo.calcular());
+       
     }//GEN-LAST:event_botoncitoActionPerformed
 
     /**
