@@ -21,7 +21,7 @@ public class Calculo {
         
         x1=((-1*(v.getB()))+r)/(2*v.getA());
        
-        if (r==-1)
+        if (r<0)
         {
             resul=" hay raises imaginarias ";
             return resul;
@@ -40,7 +40,7 @@ public class Calculo {
         
         x2=((-1*(v.getB()))-r)/(2*v.getA());
        
-        if (r==-1)
+        if (r<0)
         {
             resul2=" hay raises imaginarias ";
             return resul;
