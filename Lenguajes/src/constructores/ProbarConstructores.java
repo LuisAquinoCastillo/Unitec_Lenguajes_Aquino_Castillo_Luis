@@ -6,7 +6,6 @@
 package constructores;
 
 import javax.swing.JFrame;
-import javax.swing.JTextField;
 
 /**
  *
