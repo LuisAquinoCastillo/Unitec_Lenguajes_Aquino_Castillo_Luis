@@ -18,9 +18,9 @@ public class Prueba2 {
         Se necesita uno o mas priitivos para definirlo*/
         String nombre="Luis Abraham";
         String otro=new String("omega"); //Constructor
-        Usuario u=new Usuario();
-        u.setAltura(1.7f);
-        u.setPeso(80);
+        //Usuario u=new Usuario();
+        //u.setAltura(1.7f);
+        //u.setPeso(80);
     }
     
 }

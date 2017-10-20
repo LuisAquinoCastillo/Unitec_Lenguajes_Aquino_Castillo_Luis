@@ -12,6 +12,29 @@ package abstraccion;
 public class Usuario {
     private float peso;
     private float altura;
+    
+    public static void main(String[] args) {
+        Usuario usu=new Usuario();
+        //Valores predeterminados de peso y altura
+        System.out.println("Peso: "+usu.peso + " Altura: "+usu.altura);
+        Usuario usu2=new Usuario(3);
+        
+    }
+    Usuario(){
+        peso=10;
+        altura=1.20f;
+    }
+    Usuario(int b){
+        
+        for (int i=0;i<b;i++)
+        {
+           peso=15;
+        altura=1.20f; 
+            System.out.println("Peso: "+peso + " Altura: "+altura);
+        }
+    }
+
+    
 
     public float getPeso() {
         return peso;

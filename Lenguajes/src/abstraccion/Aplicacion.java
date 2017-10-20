@@ -105,9 +105,8 @@ public class Aplicacion extends javax.swing.JFrame {
         //luis.altura =1.80f;
         float alturita=Float.parseFloat(textoAltura.getText());
         float pesito=Float.parseFloat(textoPeso.getText());
-        
-        luis.setAltura(alturita);
-        luis.setPeso(pesito);
+        //luis.setAltura(alturita);
+        //luis.setPeso(pesito);
         
         Imc modelo=new Imc();//Creacion de un modelo
         modelo.u=luis;

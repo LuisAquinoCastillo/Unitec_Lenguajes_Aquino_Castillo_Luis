@@ -9,10 +9,10 @@ package interfaces;
  *
  * @author luis
  */
-public interface Direccion {
-    public int x=2;
-    //Un metodo
-    public void generarDireccion();
+public class ProcedimientoFisico {
+    
+    public static void main(String[] args)
+    {}
     
     
 }
