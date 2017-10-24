@@ -43,7 +43,7 @@ public class GeneradorUsuarios {
         
         //Generaremos un arreglo mutable
         //<Usuario> indica que este arreglo solamente va a aceptar objetos de la clase Usuario
-        ArrayList<Usuario> usuarios=new ArrayList<Usuario>(); //List y ArrayListan estan dentro de un paquete llamado java.util
+        ArrayList<Usuario> usuarios=new ArrayList<Usuario>(); //List y ArrayList estan dentro de un paquete llamado java.util
         usuarios.add(u1);
         usuarios.add(u2);
         usuarios.add(u3);
