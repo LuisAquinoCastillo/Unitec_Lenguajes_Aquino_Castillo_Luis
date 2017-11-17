@@ -103,16 +103,22 @@ public class Aplicacion extends javax.swing.JFrame {
         Usuario luis=new Usuario(); //Declaracion de un objeto. [referencia] val = new [Constructor]
         //luis.peso = 90;
         //luis.altura =1.80f;
+        try{
         float alturita=Float.parseFloat(textoAltura.getText());
+        Validaciones.validarNumeroNoNegativo(alturita);
         float pesito=Float.parseFloat(textoPeso.getText());
-        //luis.setAltura(alturita);
-        //luis.setPeso(pesito);
+        Validaciones.validarNumeroNoNegativo(pesito);
+        
+        luis.setAltura(alturita);
+        luis.setPeso(pesito);
         
         Imc modelo=new Imc();//Creacion de un modelo
         modelo.u=luis;
         modelo.calcular();
         etiqueta.setText(modelo.calcular());
-       
+        }catch(Exception e){
+            etiqueta.setText(e.getMessage());
+        }
     }//GEN-LAST:event_botoncitoActionPerformed
 
     /**
