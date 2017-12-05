@@ -6,6 +6,7 @@
 package conexion;
 
 import java.sql.*;
+import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 /**
@@ -19,6 +20,23 @@ public class ProbarConexion {
         con=Conexion.conectarse("root", "root");
             System.out.println("Conctado");
             // Aqui se incluye codigo de SQL querys
+            //Paso1 generar una consulta
+            Statement st= con.createStatement();
+            ResultSet rs=st.executeQuery("SELECT * FROM TABLITA");
+            
+            //Viene la traduccion
+            ArrayList<Tablita> registros=new ArrayList<>();
+            while(rs.next()){
+                //Crear un objrto de tipo tablita
+                Tablita t=new Tablita();
+                t.setId(rs.getInt(1));
+                t.setNombre(rs.getString(2));
+                registros.add(t);
+            }
+            for(Tablita t:registros){
+                System.out.println("id: "+t.getId()+" Nombre: "+t.getNombre());
+            }
+            st.close();
             
         }catch(ClassNotFoundException e){
             System.out.println("No se cargo el Driver");
